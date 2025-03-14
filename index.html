@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HIPS provides expert mobile surveillance training for law enforcement, specializing in covert operations and technology integration.">
+    <meta name="keywords" content="mobile surveillance, law enforcement training, covert operations, HIPS">
+    <meta name="author" content="HIPS - Hiding in Plain Sight">
+    <title>HIPS Consulting LLC - Mobile Surveillance Training</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            color: #1e2a44;
+            line-height: 1.6;
+        }
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(90deg, #1e2a44, #2e4370);
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #e67e22;
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #d35400, #e67e22);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero .logo {
+            max-width: 320px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .hero .logo:hover {
+            transform: scale(1.05);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            background-color: #2e7d32;
+            color: white;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+        }
+        /* About Section */
+        .about {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            color: #1e2a44;
+            margin-bottom: 1.5rem;
+        }
+        .about p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .about a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+        .about a:hover {
+            text-decoration: underline;
+        }
+        /* Training Section */
+        .training {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        .training h2 {
+            font-size: 2.5rem;
+            color: #1e2a44;
+            margin-bottom: 2rem;
+        }
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+        .training-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .training-card:hover {
+            transform: translateY(-5px);
+        }
+        .training-card h3 {
+            color: #e67e22;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        /* Testimonials Section */
+        .testimonials {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .testimonials h2 {
+            font-size: 2.5rem;
+            color: #1e2a44;
+            margin-bottom: 2rem;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+        /* Training Dates Section */
+        .training-dates {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f9e7d7, white);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .training-dates h2 {
+            font-size: 2.5rem;
+            color: #1e2a44;
+            margin-bottom: 1.5rem;
+        }
+        .training-dates p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .training-dates .cta-button {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        /* Contact Form Section */
+        .contact {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .contact h2 {
+            font-size: 2.5rem;
+            color: #1e2a44;
+            margin-bottom: 2rem;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: #1e2a44;
+        }
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .contact input:focus,
+        .contact textarea:focus {
+            border-color: #2e7d32;
+            outline: none;
+        }
+        .contact button {
+            background-color: #2e7d32;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .contact button:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+        }
+        /* Footer */
+        footer {
+            background: linear-gradient(90deg, #1e2a44, #2e4370);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #e67e22;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #d35400;
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .training-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            .about, .training, .testimonials, .training-dates, .contact {
+                margin: 2rem auto;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#training">Training</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#dates">Dates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <img src="hips-logo.png" alt="HIPS Consulting LLC Logo" class="logo">
+        <h1>HIPS Consulting LLC</h1>
+        <p>Empowering Law Enforcement with Cutting-Edge Mobile Surveillance Training</p>
+        <a href="#contact" class="cta-button">Request Training</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About HIPS Consulting</h2>
+        <p>HIPS Consulting, also known as Hiding in Plain Sight, specializes in expert surveillance training tailored for law enforcement professionals seeking to master the art of covert operations. With a focus on mobile surveillance techniques, HIPS offers comprehensive programs that blend real-world scenarios, advanced technology integration, and urban stealth tactics to ensure officers can track suspects undetected in any environment. Led by experienced instructors Sgt. Dave Chambers and Sgt. Brent Sitowski, HIPS provides hands-on training to enhance tactical skills, leveraging tools like GPS trackers, drones, and encrypted communications. For more information on upcoming sessions, such as the May 14–16, 2025, training in Medford, Oregon, contact HIPS at <a href="mailto:hipsconsultingllc@gmail.com">hipsconsultingllc@gmail.com</a>, or reach out directly to Sgt. Chambers at <a href="tel:+15418927888">541-892-7888</a> or Sgt. Sitowski at <a href="tel:+15413014096">541-301-4096</a>.</p>
+    </section>
+
+    <!-- Training Section -->
+    <section class="training" id="training">
+        <h2>Mobile Surveillance</h2>
+        <div class="training-grid">
+            <div class="training-card">
+                <h3>Urban Covert Operations</h3>
+                <p>Master techniques to conduct surveillance in crowded urban environments without being detected.</p>
+            </div>
+            <div class="training-card">
+                <h3>High-Risk Scenarios</h3>
+                <p>Train in simulated operations involving armed suspects, vehicle pursuits, and multi-agent coordination.</p>
+            </div>
+            <div class="training-card">
+                <h3>Advanced Tech Solutions</h3>
+                <p>Leverage cutting-edge tools like GPS trackers, drones, and encrypted comms for effective surveillance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>Trusted by Law Enforcement</h2>
+        <div class="testimonial-grid">
+            <!-- Testimonials will be added here later if desired -->
+        </div>
+    </section>
+
+    <!-- Training Dates Section -->
+    <section class="training-dates" id="dates">
+        <h2>Upcoming Training Dates</h2>
+        <p>Join us for our next mobile surveillance training session from <strong>May 14–16, 2025</strong> in <strong>Medford, Oregon</strong>.</p>
+        <p>Seats are limited—reserve your spot today!</p>
+        <a href="#contact" class="cta-button">Register Now</a>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us for Training Inquiries</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 HIPS Consulting LLC. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:hipsconsultingllc@gmail.com">hipsconsultingllc@gmail.com</a></p>
+        <p>Sgt. Dave Chambers: <a href="tel:+15418927888">541-892-7888</a> | Sgt. Brent Sitowski: <a href="tel:+15413014096">541-301-4096</a></p>
+    </footer>
+</body>
+</html>
